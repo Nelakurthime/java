@@ -30,3 +30,9 @@ public class LexicographicalOrder {
         System.out.println(solution.lexicalOrder(2));  // [1, 2]
     }
 }
+
+
+And here are the output what we got are
+ for examples 1 & 2 are:
+[1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9]
+[1, 2]
