@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class PalindromeRecursive {
+    public static boolean isPalindrome(String str, int start, int end) {
+        if (start >= end) {
+            return true; // base case: all characters matched
+        }
+        if (str.charAt(start) != str.charAt(end)) {
+            return false; // mismatch found
+        }
+        return isPalindrome(str, start + 1, end - 1);
+    }
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+        String cleaned = input.replaceAll("\\s+", "").toLowerCase();
+        if (isPalindrome(cleaned, 0, cleaned.length() - 1)) {
+            System.out.println("\"" + input + "\" is a palindrome.");
+        } else {
+            System.out.println("\"" + input + "\" is not a palindrome.");
+        }
+        scanner.close();
+    }
+}
+
+// Here is the sample output:
+1. Enter a string: RaceCar
+  "RaceCar" is a palindrome.
+2. Enter a string: OpenAI
+   "OpenAI" is not a palindrome.
+3. Enter a string: Never odd or even  
+   "Never odd or even" is a palindrome.
+
